@@ -1,0 +1,68 @@
+<div class="container" ng-init="getOrders()">
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+	 	    <div class="card">
+	 	    	<div class="card-header text-center">
+		      		<h4>Dalviroo Kitchen<span class="fa fa-download pull-right" title="download report" style="cursor: pointer;" ng-click="downloadReport()"></span></h4>
+
+		      	</div>
+	 	      	<div class="card-body">
+	 	    		<table class="table table-bordered">
+	 	    		  <thead>
+	 	    		    <tr>
+	 	    		      <th>Name</th>
+	 	    		      <th>Quantity</th>
+	 	    		      <th>Created-till-now</th>
+	 	    		      <th>Predicted</th>
+	 	    		      <th>Status</th>
+	 	    		    </tr>
+	 	    		  </thead>
+	 	    		  <tbody>
+	 	    		    <tr ng-repeat="d in order track by $index">
+	 	    		      <td>{{d.name}}</td>
+	 	    		      <td>{{d.quantity}}</td>
+	 	    		      <td>{{d.created}}</td>
+	 	    		      <td>{{d.predicted}}</td>
+	 	    		      <td><button class="btn btn-primary" ng-click="orderCreated(d._id, d.quantity)">Done</button></td>
+	 	    		    </tr>
+	 	    		  </tbody>
+	 	    		</table>
+	 	      	</div>
+
+	 	      	<div class="card-body" id="report" style="margin-top: 10000px">
+	 	    		<table class="table table-bordered">
+	 	    		  <thead>
+	 	    		    <tr>
+	 	    		      <th>Name</th>
+	 	    		      <th ng-show="!isDownload">Quantity</th>
+	 	    		      <th>Created-till-now</th>
+	 	    		      <th>Predicted</th>
+	 	    		      <th ng-show="!isDownload">Status</th>
+	 	    		    </tr>
+	 	    		  </thead>
+	 	    		  <tbody>
+	 	    		    <tr ng-repeat="d in order track by $index">
+	 	    		      <td>{{d.name}}</td>
+	 	    		      <td ng-show="!isDownload">{{d.quantity}}</td>
+	 	    		      <td>{{d.created}}</td>
+	 	    		      <td>{{d.predicted}}</td>
+	 	    		      <td ng-show="!isDownload"><button class="btn btn-primary" ng-click="orderCreated(d._id, d.quantity)">Done</button></td>
+	 	    		    </tr>
+	 	    		  </tbody>
+	 	    		</table>
+	 	      	</div>
+	 	    </div>
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+	.cardborder { 
+	    border: 0px solid rgba(0,0,0,.125);
+	}
+
+	.popUp {
+		z-index: 1000;
+		position: absolute;
+	}
+</style>

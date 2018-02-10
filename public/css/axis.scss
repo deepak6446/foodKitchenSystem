@@ -1,0 +1,251 @@
+/***** Variables *****/
+$white: #fff;
+$yellow: #edc02c;
+$red: #ec5544;
+$blue: #6790f0;
+$pink: #ff4f7b;
+$green: #38a173;
+$lgreen: #5ab727;
+$orange: #ff7c00;
+$violet: #af8df0;
+$gray: #454d59;
+$lgray: #f9f9f9;
+$wgray: #fafafa;
+$egray: #e1e1e1;
+$mgray: #9daeb9;
+$hmgray: rgba($mgray,0.5);
+$cgray : #a3b1c7;
+
+//style started here
+    .page-intro {
+        padding: 25px 50px 25px 45px;
+        .tsearch{
+                border:solid #e1e1e1 1px;
+                border-radius:6px;
+        }
+    }
+    .titlebar{
+        left: 0px;
+        border-bottom: 2px #6790f0 solid;
+        .tlinks{
+                a{
+                  font-size: 25px;
+                    img {
+                        margin: 0 -20px 0 10px;
+                        width: 100%;
+                        border-radius: 0px;
+                }
+            }
+
+        }
+
+    }
+    .page-container{
+        height:100%;
+        padding:40px 0 0 0px;
+            .page-inner{
+                top:0px!important;
+            }
+    }
+    .app-form{
+        margin: 0px auto 0;
+     }
+    .btn.dred.filled {
+        float: right;
+      color: $white;
+        background: #f22f46;
+        margin: 5px;
+         &:hover {
+            background: #e00e27;
+            border-color: #e00e27;
+        }
+    }
+    .mlist-app h4 {
+        margin: 15px 0 0;
+    }
+
+    .sw-body {
+    position: relative;
+    padding: 20% 0 0;
+    min-height: 50px;
+    margin: 20px 0 15px;
+    }
+    .sw-wrap {
+    padding: 5px 2%;
+    }
+//    .panel-body {
+//    padding: 10px;
+//    }
+//    .dropzone{
+//    min-height: 35px;
+//    }
+//    .dz-show.single{
+//    background-color: $blue;
+//        p  {
+//            padding: 0px 15px;
+//            color:$white;
+//        }
+//    }
+//    .dz-preview ,.dz-file-preview{
+//        display: none!important;
+//    }
+//    .dropzone.dz-clickable .dz-message, .dropzone.dz-clickable .dz-message * {
+//    padding: 10px 0px;
+//    color:$white;
+//    }
+
+    .chequeimg .fbw {
+      background-image: url(http://freechequewriter.com/cs/image/AxisBank_IN.png);
+    }
+    .chequeimg .fgrey {
+      background-image: url(https://i.imgsafe.org/bb09a95ebe.png);
+    }
+    .amount{
+    display: inline;
+    }
+    .amountWord{
+    @extend .amount;
+    float: right;
+    }
+    .amountFigure{
+    text-align: right;
+    }
+//    .page-view , #dataPanel,.sm-title{
+//    display:none;
+//    }
+    .ecell {
+
+        .correctionCheckbox{
+        padding: 0px 30px;
+        }
+        .fgrey{
+            display:none;
+        }
+        .tfip.clearfix{
+            float:right;
+            padding-top: 2%;
+             .form-control {
+            display: block;
+            width: 100%;
+            height: 20px;
+            padding: 1px 2px;
+            font-size: 12px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: $white;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            }
+        }
+        input[type=text],input[type=date] {
+        width: 100%;
+        outline: none;
+        background: #f9f9f9;
+        border: none;
+        border-bottom: solid 1px #333;
+        }
+
+    }
+    .ui-checkbox {
+    display: none;
+    }
+
+    .ui-checkbox + label {
+      position: relative;
+      padding-left: 25px;
+      display: inline-block;
+      font-size: 12px;
+    }
+
+    .ui-checkbox + label:before {
+        background-color: #fff;
+        border: 1px solid $blue;
+        padding: 9px;
+        border-radius: 3px;
+        display: block;
+        position: absolute;
+        top: -10PX;
+        left:0;
+        content: "";
+    }
+    .ui-checkbox:checked + label:after {
+        content: '\2714';
+        font-size: 14px;
+        position: absolute;
+        top: -10px;
+        left: 4px;
+        color: $blue;
+      line-height: 1.75;
+    }
+
+    .loader {
+        display: none;
+        opacity: 0.8;
+        background-color: #ccc;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: 1000;
+            img {
+                display: block;
+                margin: 20px auto;
+                position: relative;
+                top: 45%;
+        }
+    }
+    .etable .erow.head p{
+        font-size: 10px;
+    }
+    .app-demo .ptable.col2 .erow .ecell {
+    width: 33% !important;
+    }
+  .asst-block{
+   position: relative!important;
+//    width:50%;
+//    margin: 0 auto;
+  }
+.dropzone.dz-clickable .dz-message, .dropzone.dz-clickable .dz-message * {
+  margin: 7%;
+}
+
+    @media (max-width: 1366px){
+     .asst-block .asst-widget.fix {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1440px){
+        .etable.mlist .ecell.name {
+            width: 17%;
+        }
+        .etable.mlist .ecell.zones {
+            width: 20%;
+        }
+      .etable.mlist .ecell.correction {
+          width: 9%;
+      }
+      .etable.mlist .ecell.rejection {
+          width: 8%!important;
+      }
+      .etable.mlist .ecell.score {
+          width: 9%!important;
+      }
+        .etable.mlist .ecell {
+        width: 12%;
+        }
+    }
+
+#frontgrey {
+    display:none;
+}
+.fright.form-control{
+  width:20%;
+}
